@@ -15,12 +15,13 @@ st.write('Customized Message:', widgetuser_input)
 
 
 #API calls
-responds = requests.get('https://api.vatcomply.com/rates?base=USD')
+response = requests.get('https://api.vatcomply.com/rates?base=USD')
 
-# Add text
-st.write('Respond:') 
-
-# Display the customized message 
-st.write('Output:', responds.json())
+if response.status_code == 200:
+    data = response.json()
+    st.write('Output:')
+    st.json(data)  # nicely formatted JSON output
+else:
+    st.error(f"API call failed with status code: {response.status_code}")
 
 
