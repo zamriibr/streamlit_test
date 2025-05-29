@@ -6,4 +6,4 @@ st.write('Welcome to my Streamlit app!')
 # Create a text input 
 widgetuser_input = st.text_input('Enter a custom message:', 'Hello, Streamlit!') 
 # Display the customized message 
-st.write('Customized Message:', user_input)
+st.write('Customized Message:', widgetuser_input)
