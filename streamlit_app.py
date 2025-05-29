@@ -15,7 +15,7 @@ st.write('Customized Message:', widgetuser_input)
 
 
 #API calls
-response = requests.get('https://api.vatcomply.com/rates?base=USD')
+response = requests.get('https://api.vatcomply.com/rates?base=MYR')
 
 if response.status_code == 200:
     data = response.json()
