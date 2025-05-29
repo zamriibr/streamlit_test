@@ -21,6 +21,6 @@ responds = requests.get('https://api.vatcomply.com/rates?base=USD')
 st.write('Respond:') 
 
 # Display the customized message 
-st.write('Output:', responds)
+st.write('Output:', responds.json())
 
 
